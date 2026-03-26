@@ -1,0 +1,20 @@
+mkdir -p vjezbe2/data
+mkdir vjezbe2/backup
+cd vjezbe2/data/
+touch script.js
+touch style.css
+touch .env
+echo 'console.log("Hello, World!")' > script.js 
+echo 'body { background-color: #f0f0f0; }' > style.css 
+echo 'VJEZBE=OS' > .env 
+cat script.js 
+cat style.css 
+cat .env
+git add .
+git commit -m 'Zadatak 2'
+cp -arv . ../backup/
+ls -laS ../backup/ 
+git status
+git add ../backup/
+git commit -m 'Zadatak 3'
+history > history.txt
